@@ -1,0 +1,135 @@
+.footer-top{
+    padding: 0 0 75px;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;
+    &__contact{
+        max-width: 200px;
+        font-size: 14px;
+        margin-right: 100px;
+        line-height: 24px;
+    }
+    &__adress,
+    &__email,
+    &__phone{
+        display: block;
+        margin-bottom: 18px;
+        color:$footer-el;
+    }
+    &__logo{
+        margin-bottom: 30px;
+        margin-top: 75px;
+    }
+
+    &__nav{
+        width: 170px;
+        margin-right: 130px;
+    }
+
+    &__title{
+        font-size: 16px;
+        @extend %dmsans-700;
+        color:#1f2044;
+        text-transform: uppercase;
+        margin-top: 100px;
+        margin-bottom: 27px;
+    }
+
+    &__list-item{
+        margin-bottom: 17px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__text{
+        margin-bottom: 40px;
+        font-size: 14px;
+        line-height: 24px;
+        color:$footer-el;
+    }
+
+    &__link{
+        color:$footer-el;
+    }
+
+    &__form{
+        display: flex;
+    }
+
+    &__form-input{
+        border: none;
+        background-color: #fef7f0;
+        padding: 15px 10px 15px 15px;
+        margin-right:0;
+        max-width: 170px;
+        width: 100%;
+        &::placeholder{
+            @extend %dmsans-400;
+            font-size: 12px;
+            color:#234969;
+        }
+    }
+
+    &__form-btn{
+        @extend %btn;
+        padding: 15px 10px 13px 15px;
+    }
+}
+
+.footer-bottom{
+    color:$footer-el;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 35px 0 40px;
+    &__list{
+        display: flex;
+    }
+    &__link{
+        padding: 0 15px;
+        @extend %rubik-400;
+    }
+    &__item + .footer-bottom__item{
+        border-left: 1px solid #7b7b7b;
+        
+    }
+}
+
+@media (max-width:1060px){
+    .footer-top{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__nav{
+            margin-right: 0;
+        }
+        &__contact{
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width:675px){
+    .footer-bottom{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        &__copy{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .footer-top{
+        display: block;
+        &__logo{
+            justify-content: center;
+        }
+        &__item{
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__form{
+            justify-content: center;
+        }
+    }
+}

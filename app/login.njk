@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/index.min.css">
+  </head>
+  <body>
+   
+    {% include 'app/modules/_header/_header.html'%}
+
+    <main class="main">
+      <section class="top">
+        <div class="top__container">
+          <div class="container">
+            <h3 class="top__title">Log in</h3>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">Log in</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modal">
+        <div class="container">
+          <div class="modal__inner">
+            <form class="modal__form">
+              <label class="modal__label">
+                Username or email address *
+                <input class="modal__input" type="text" required/>
+              </label>
+              <label class="modal__label">
+                Password *
+                <input class="modal__input" type="text" required/>
+              </label>
+              <button class="modal__button">Login</button>
+              <div class="modal__bottom-box">
+                <label class="modal__label">
+                  <input type="checkbox" />
+                  Remember me
+                </label>
+                <a class="modal__help" href="#">Lost your password?</a>
+              </div>
+            </form>
+            <a class="modal__register" href="#">Not registered? No problem</a>
+            <button class='modal__register-btn'>Create an account</button>
+          </div>
+        </div>
+      </section>
+      <div class="partners">
+        <div class="container">
+          <div class="partners__items">
+            <div class="partners__item">
+              <img class="partner__img" src="images/partners/1.png" alt="">
+            </div>
+            <div class="partners__item">
+              <img class="partner__img" src="images/partners/2.png" alt="">
+            </div>
+            <div class="partners__item">
+              <img class="partner__img" src="images/partners/3.png" alt="">
+            </div>
+            <div class="partners__item">
+              <img class="partner__img" src="images/partners/4.png" alt="">
+            </div>
+            <div class="partners__item">
+              <img class="partner__img" src="images/partners/5.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+     {% include 'app/modules/_footer/_footer.html'%}
+     <script src="js/main.min.js"></script>
+  </body>
+</html>

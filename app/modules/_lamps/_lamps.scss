@@ -1,0 +1,128 @@
+.lamps{
+    padding: 100px 0 100px;
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 870px;
+        width: 100%;
+        background-color: #feefe2;
+        display: flex;
+        padding-bottom: 60px;
+    }
+
+    &__item + .lamps__item{
+        margin-left: 30px;
+    }
+
+    &__item-img{
+        margin-top: -103px;
+    }
+
+    &__item__inner{
+        max-width: 400px;
+        padding-left: 70px;
+        padding-top: 100px;
+    }
+    &__item-title{
+        font-size: 26px;
+        line-height: 32px;
+        @extend %dmsans-700;
+        color:$slider;
+        margin-bottom: 25px;
+    }
+
+    &__item-text{
+        color:$slider;
+        @extend %rubik-400;
+        margin-bottom: 32px;
+    }
+
+    &__item-link{
+        padding: 20px 18px 25px 20px;
+        border:1px solid $slider;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    &__item-arrow{
+        margin-left:40px;
+    }
+}
+
+
+@media (max-width:1200px){
+    .lamps{
+        &__item-img{
+            height: 300px;
+            margin-top: -70px;
+        }
+        &__item__inner{
+            padding-left: 10px;
+            padding-top: 40px;
+            padding: 20px;
+        
+        }
+    }
+}
+
+@media (max-width:1040px){
+    .lamps{
+        padding: 0;
+        &__items{
+            display: block;
+        }
+        &__item{
+            justify-content: space-around;
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        &__item+.lamps__item {
+            margin-left: 0;
+        }
+        &__item-img{
+            display: block;
+            margin-top: 0;
+        }
+    }
+}
+
+    
+
+@media (max-width:860px){
+    .lamps{
+        &__items{
+            display: block;
+        }
+        
+        &__item{
+            padding-bottom: 0;
+            
+            justify-content: space-around;
+        }
+        
+    }
+}
+
+
+@media (max-width:520px){
+    .lamps{
+        &__item-img{
+            height: 150px;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width:450px){
+    .lamps{
+        &__item-img{
+            display: none;
+        }
+        &__item__inner{
+            width: 100%;
+            padding: 20px 15px 20px;
+        }
+    }
+}

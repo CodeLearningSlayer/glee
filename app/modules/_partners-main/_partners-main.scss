@@ -1,0 +1,40 @@
+.partners{
+    background-color: #fcf5ee;
+    &--main{
+        padding-top: 175px;
+        margin-top: -178px;
+    }
+    &__items{
+        padding: 90px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width:860px){
+    .partners--main{
+        margin-top: -216px;
+    }
+    .partners{
+        &__items{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin-right: 65px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .partners{
+        &__items{
+            flex-direction: column;
+        }
+        &__item{
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+}

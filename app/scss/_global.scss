@@ -1,0 +1,127 @@
+html,
+body{
+    height:100%;
+}
+
+body{
+    font-size: 16px;
+    @extend %dmsans-500;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+
+.title{
+    font-size: 36px;
+    @extend %dmsans-700;
+    color:$title;
+    margin-bottom: 35px;
+}
+
+.mixitup-control-active{
+    color:$title !important;
+}
+
+.filters{
+    margin-bottom: 75px;
+    color:$text;
+    display: flex;
+    justify-content: center;
+}
+
+.filter{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 25px;
+    color:$text; 
+}
+
+.top{
+    background-color: #edf1f4;
+    text-align: center;
+    &__container{
+        padding: 30px 0 35px;
+    }
+    &__title{
+        @extend %rubik-400;
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+}
+
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        padding-right: 20px;
+        color:#83898f;
+        position: relative;
+        &::after{
+            content: '/';
+            position: absolute;
+            color:inherit;
+            bottom:0;
+            right:7px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                display:none;
+            }
+        }
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: start;
+    padding: 40px 0;
+    &__list{
+        display: flex;
+    }
+    &__item + .pagination__item{
+        margin-left: 15px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border:1px solid $descr;
+    }
+
+    &__link--active{
+        background-color: $descr;
+        color:#fff;
+    }
+
+    &__btn{
+        height: 50px;
+        border:1px solid $descr;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+    &__prev{
+        margin-right: 15px;
+        display: none;
+    }
+    &__next{
+        margin-left: 15px;
+    }
+}

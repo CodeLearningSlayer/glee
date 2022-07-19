@@ -1,0 +1,9 @@
+.video{
+    padding: 120px 0 120px;
+    &__popup{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
